@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess The Word</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="Title">Guess The Word</h1>
+      <div class="Guess">
+        <button class="Guess_Retry" id="retry">Retry</button>
+        <p class="Guess_Result" id="result">Guess this word!</p>
+        <p class="Guess_Word" id="word"></p>
+        <p class="Guess_Left">Guesses left: <span id="left"></span></p>
+        <p class="Guess_Used" id="used">Used letters will be here</p>
+        <form class="Guess_Form" id="guess">
+          <input type="text" maxlength="1" id="input" required />
+          <button>Guess</button>
+        </form>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
