@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-image: linear-gradient(315deg, #010203, #014122, #018141);
+}
+
+.TrackList {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #00ff7f #010203;
+}
+.TrackList_Item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 25px;
+  padding: 15px 25px;
+  cursor: pointer;
+}
+.TrackList_Item_Cover {
+  width: 75px;
+  border: 2px solid #00ff7f;
+}
+.TrackList_Item_Title {
+  font-size: 20px;
+  color: #00ff7f;
+}
+.TrackList_Item:hover {
+  background: #010203;
+}
+
+.Player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 75px;
+}
+
+.TrackDisplay {
+  width: 35vw;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+}
+.TrackDisplay_Cover {
+  width: 175px;
+  border-radius: 15px;
+  border: 5px solid #00ff7f;
+}
+.TrackDisplay_Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.TrackDisplay_Title {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #00ff7f;
+}
+.TrackDisplay_Author {
+  font-size: 20px;
+  color: #00ff7f;
+}
+
+.Controls {
+  width: 100%;
+  background: #010203;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Controls_Slider {
+  width: 100%;
+  cursor: pointer;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+}
+.Controls_Slider::-webkit-slider-runnable-track {
+  height: 100%;
+  background: #010203;
+}
+.Controls_Slider::-moz-range-track {
+  height: 100%;
+  background: #010203;
+}
+.Controls_Slider::-webkit-slider-thumb {
+  background: #00ff7f;
+  box-shadow: -1000px 0 0 1000px #00ff7f;
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 10px;
+  border-radius: 0;
+}
+.Controls_Slider::-moz-range-thumb {
+  background: #00ff7f;
+  box-shadow: -1000px 0 0 1000px #00ff7f;
+  border: 0;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 10px;
+  border-radius: 0;
+}
+.Controls_Btns {
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.Controls button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.Controls button img {
+  width: 50px;
+}
+.Controls button:hover {
+  background: #00ff7f;
+}
+.Controls button:hover img {
+  filter: brightness(0);
+}/*# sourceMappingURL=App.css.map */

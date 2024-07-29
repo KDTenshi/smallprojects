@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+$color-black: #010203;
+$color-dark-green: #014122;
+$color-green: #018141;
+$color-light-green: #00ff7f;
+$color-black-opacity: rgba(0, 0, 0, 0.5);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-image: linear-gradient(315deg, $color-black, $color-dark-green, $color-green);
+}
+
+.TrackList {
+  width: 100%;
+  min-height: 100vh;
+  background: $color-black-opacity;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: $color-light-green $color-black;
+
+  &_Item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 25px;
+    padding: 15px 25px;
+    cursor: pointer;
+
+    &_Cover {
+      width: 75px;
+      border: 2px solid $color-light-green;
+    }
+
+    &_Title {
+      font-size: 20px;
+      color: $color-light-green;
+    }
+
+    &:hover {
+      background: $color-black;
+    }
+  }
+}
+
+.Player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 75px;
+}
+
+.TrackDisplay {
+  width: 35vw;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background: $color-black-opacity;
+  border-radius: 25px;
+
+  &_Cover {
+    width: 175px;
+    border-radius: 15px;
+    border: 5px solid $color-light-green;
+  }
+
+  &_Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &_Title {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: $color-light-green;
+  }
+
+  &_Author {
+    font-size: 20px;
+    color: $color-light-green;
+  }
+}
+
+.Controls {
+  width: 100%;
+  background: $color-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_Slider {
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+
+    &::-webkit-slider-runnable-track {
+      height: 100%;
+      background: $color-black;
+    }
+
+    &::-moz-range-track {
+      height: 100%;
+      background: $color-black;
+    }
+
+    &::-webkit-slider-thumb {
+      background: $color-light-green;
+      box-shadow: -1000px 0 0 1000px $color-light-green;
+      border: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      height: 20px;
+      width: 10px;
+      border-radius: 0;
+    }
+
+    &::-moz-range-thumb {
+      background: $color-light-green;
+      box-shadow: -1000px 0 0 1000px $color-light-green;
+      border: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      height: 20px;
+      width: 10px;
+      border-radius: 0;
+    }
+  }
+
+  &_Btns {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  & button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+
+    & img {
+      width: 50px;
+    }
+
+    &:hover {
+      background: $color-light-green;
+
+      & img {
+        filter: brightness(0);
+      }
+    }
+  }
+}
