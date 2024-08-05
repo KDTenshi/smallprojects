@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #ff6347;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.Title {
+  font-size: 35px;
+  color: #ffe2dd;
+  text-align: center;
+}
+
+.Timer {
+  width: 35vw;
+  min-width: 450px;
+  max-width: 600px;
+  padding: 25px;
+  background: #ffe2dd;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  &_Type {
+    font-size: 25px;
+    color: #ff6347;
+    text-decoration: underline;
+  }
+
+  &_Time {
+    font-size: 50px;
+    color: #ff6347;
+    text-align: center;
+  }
+}
+
+.Controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    background: #ffe2dd;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    & img {
+      width: 50px;
+    }
+
+    &:hover {
+      border-color: #ff6347;
+    }
+  }
+}
+
+.Setters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Setter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_Title {
+    font-size: 20px;
+    color: #ff6347;
+  }
+
+  &_Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    & button {
+      border: 2px solid transparent;
+      color: #ff6347;
+      font-size: 35px;
+      background: #ffe2dd;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      transition: all 0.25s;
+
+      &:hover {
+        border-color: #ff6347;
+      }
+    }
+
+    & p {
+      color: #ff6347;
+      font-size: 25px;
+    }
+  }
+}
+
+.New {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 451px) {
+  .Title {
+    display: none;
+  }
+
+  .Timer {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: center;
+  }
+
+  .Setters {
+    flex-direction: column;
+    justify-content: start;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-height: 451px) {
+  .Timer_Type {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 401px) {
+  .Setters {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 201px) {
+  .Controls {
+    display: none;
+  }
+}
